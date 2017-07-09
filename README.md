@@ -1,3 +1,5 @@
+
+[![](https://jitpack.io/v/frankodoom/SignalR-Client.svg)](https://jitpack.io/#frankodoom/SignalR-Client)
 # SignalR-Client
 
 An easy to use SignalR client Android Library for real-time mobile communication. Just compile this library into your project
@@ -19,7 +21,7 @@ Add this to your root build.gradle at the end of repositories
   Add and compile the dependency for SignalR-Client library
   
   	dependencies {
-	        compile 'com.github.frankodoom:SignalR-Client:1.0.0'
+	        compile 'com.github.frankodoom:SignalR-Client:1.0.1'
 	}
  
  using the SignalRClient
