@@ -3,6 +3,10 @@
 An easy to use SignalR client Android Library for real-time mobile communication. Just compile this library into your project
 and you are ready to use SignalR in Android
 
+SignalR requires internet permision, add this in your  `AndroidManifest.xml `
+
+ `<uses-permission android:name="android.permission.INTERNET"/> `
+
 Add this to your root build.gradle at the end of repositories
 
 	allprojects {
@@ -12,7 +16,7 @@ Add this to your root build.gradle at the end of repositories
 		}
 	}
   
-  Add the dependency
+  Add and compile the dependency for SignalR-Client library
   
   	dependencies {
 	        compile 'com.github.frankodoom:SignalR-Client:1.0.0'
