@@ -26,8 +26,8 @@ Add this to your root build.gradle at the end of repositories
  
  using the SignalRClient
     
-    
-    SignalRClient.setServerUrl("https://yourServerUrl");//Setup the server url 
+    //Setup the server url 
+    SignalRClient.setServerUrl("https://yourServerUrl");
     
     //Configure the Proxy    
       SignalRClient.ConfigureProxy("ChatHub")
