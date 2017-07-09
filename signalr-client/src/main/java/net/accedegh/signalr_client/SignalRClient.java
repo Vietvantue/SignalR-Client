@@ -17,17 +17,17 @@ import microsoft.aspnet.signalr.client.hubs.HubProxy;
 public  class SignalRClient {
     public static HubConnection connection;
     public static HubProxy hubProxy;
-    public static String Base_Url;
+    public static String serverUrl;
 
     // Configure SignalR Client HUb Proxy
     public static HubProxy ConfigureProxy(String HubProxy){
-        connection = new HubConnection(Base_Url);
+        connection = new HubConnection(serverUrl);
         hubProxy= connection.createHubProxy(HubProxy);
         return hubProxy;
     }
 
     public static void setBase_Url(String base_Url) {
-        Base_Url = base_Url;
+        serverUrl = base_Url;
     }
 
     public static HubConnection getConnection() {
