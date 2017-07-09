@@ -12,8 +12,6 @@ import microsoft.aspnet.signalr.client.hubs.HubProxy;
  */
 
 
-//https://mayojava.github.io/android/library/creating-and-distributing-your-own-android-library/
-
 public  class SignalRClient {
     public static HubConnection connection;
     public static HubProxy hubProxy;
@@ -26,8 +24,8 @@ public  class SignalRClient {
         return hubProxy;
     }
 
-    public static void setBase_Url(String base_Url) {
-        serverUrl = base_Url;
+    public static void setServerUrl(String url) {
+        serverUrl = url;
     }
 
     public static HubConnection getConnection() {
