@@ -11,14 +11,17 @@ import microsoft.aspnet.signalr.client.hubs.HubProxy;
  * Created by FrankOdoom on 08/07/17.
  */
 
-public class SignalRClient {
+
+//https://mayojava.github.io/android/library/creating-and-distributing-your-own-android-library/
+
+public  class SignalRClient {
     public static HubConnection connection;
     public static HubProxy hubProxy;
     public static String Base_Url;
 
     // Configure SignalR Client HUb Proxy
     public static HubProxy ConfigureProxy(String HubProxy){
-        connection = new HubConnection("https://qcserviceapi.azurewebsites.net/signalr");
+        connection = new HubConnection(Base_Url);
         hubProxy= connection.createHubProxy(HubProxy);
         return hubProxy;
     }
