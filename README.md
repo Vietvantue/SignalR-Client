@@ -63,3 +63,46 @@ Add this to your root build.gradle at the end of repositories
             }
         });
 
+
+Invoking Serverside Method
+ This should be done in the background in order not to freeze the UI Thread
+     
+     public interface SignalRService {
+      
+      public class SendMessage extends AsyncTask {
+        static Object result;
+        @Override
+        protected Object doInBackground( Object[] objects) {
+            if (SignalRClient.getConnection().getState() == ConnectionState.Connected) {
+                result = null;
+                Object param1 = objects[0];
+                //Object param2 = objects[1];
+                try {
+                    result = SignalRClient.getHubProxy().invoke(String.class, "broadcastMessage",param1).get();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                } catch (ExecutionException e) {
+                    e.printStackTrace();
+                }
+            }
+            return result;
+        }
+
+        @Override
+        protected void onPostExecute(Object o) {
+            super.onPostExecute(o);
+            // Тут идет обработка результата.
+        }`
+
+
+Invoke the Service	
+   
+     //Send Message On Click
+        sendMessage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chatMessage = message.getText().toString();
+                new SignalRService.ChatService().execute(chatMessage); //Execute The SignalRService
+                message.setText("");
+            }
+        });
