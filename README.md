@@ -1,4 +1,5 @@
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2a6d1b427f474b168240289fa4bcb3ea)](https://www.codacy.com/app/frankodoom/SignalR-Client?utm_source=github.com&utm_medium=referral&utm_content=frankodoom/SignalR-Client&utm_campaign=badger)
 [![](https://jitpack.io/v/frankodoom/SignalR-Client.svg)](https://jitpack.io/#frankodoom/SignalR-Client)
 # SignalR-Client
 
